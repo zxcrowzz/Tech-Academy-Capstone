@@ -1,0 +1,21 @@
+[
+    {
+      "name": "South Beach",
+      "image": "assets/images/south-beach.jpg",
+      "description": "Famous for its vibrant nightlife and beautiful white sand beaches.",
+      "location": "Miami Beach"
+    },
+    {
+      "name": "Little Havana",
+      "image": "assets/images/little-havana.jpg",
+      "description": "A lively neighborhood known for Cuban culture, food, and festivals.",
+      "location": "Calle Ocho, Miami"
+    },
+    {
+      "name": "Wynwood Walls",
+      "image": "assets/images/wynwood-walls.jpg",
+      "description": "An outdoor museum showcasing vibrant street art and graffiti.",
+      "location": "Wynwood, Miami"
+    }
+  ]
+  

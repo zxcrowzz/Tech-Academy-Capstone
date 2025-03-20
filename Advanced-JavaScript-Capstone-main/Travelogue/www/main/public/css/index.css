@@ -1,0 +1,405 @@
+:root {
+    /* These variables are used to color the background of divs */
+    --main: 255, 255, 255;
+    --secondary: 40, 39, 38;
+
+    /* These colors apply to buttons and other small things */
+    --accent-1: 255, 72, 76;
+    --accent-2: 0, 199, 182;
+}
+
+.bg-color--main {
+    background-color: rgb(var(--main));
+}
+.bg-color--secondary {
+    background-color: rgb(var(--secondary));
+}
+.bg-color--accent-1 {
+    background-color: rgb(var(--accent-1));
+}
+.bg-color--accent-2 {
+    background-color: rgb(var(--accent-2));
+}
+.text-color--main {
+    color: rgb(var(--main));
+}
+.text-color--secondary {
+    color: rgb(var(--secondary));
+}
+.text-color--accent-1 {
+    color: rgb(var(--accent-1));
+}
+.text-color--accent-2 {
+    color: rgb(var(--accent-2));
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding-top: 50px;
+}
+
+
+p, h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 0;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+/*====================
+* ▼ Nav Bar Styling ▼
+**====================*/
+
+.site-navigation {
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+}
+
+.index-nav {
+    display: flex;
+    background-color: rgb(var(--main));
+    align-items: center;
+    padding: 20px 20px 20px 40px;
+    transition: 0.33s;
+    width: 100%;
+    height: 100px;
+    justify-content: center;
+}
+
+.index-nav--right-side {
+    position: relative;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+
+.index-nav--right-side a {
+    color: rgba(var(--secondary), 0.5);
+    transition: 0.15s;
+}
+
+.index-nav--right-side a:hover {
+    color: rgba(var(--accent-1), 0.5);
+    transform: translateY(-2px);
+}
+
+.nav-separator {
+    width: 2px;
+    background-color: rgba(var(--secondary), 0.05);
+    height: 40px;
+    border-radius: 50%;
+}
+
+.company-name {
+    cursor: pointer;
+}
+
+.navbar-nav {
+    font-weight: bold;
+}
+
+/* Need this specificity to override some of Bootstrap's styles */
+.navbar-nav .nav-item > .nav-link {
+    color: black;
+    transition: 0.15s;
+}
+
+.navbar-nav .nav-item > .nav-link:hover, .navbar-nav .nav-item > .nav-link:focus {
+    color: black;
+    transform: translateY(-2px);
+}
+
+.navbar-nav .dropdown-item:focus, .navbar-nav .dropdown-item:hover {
+    background-color: rgb(var(--accent-1));
+    color: rgb(var(--main));
+}
+
+.search-box {
+    display: flex;
+    height: 100px;
+    width: 110px;
+    background-color: rgb(var(--accent-1));
+    justify-content: center;
+    align-items: center;
+    transition: height 0.33s, width 0.33s, color 0.15s;
+    color: rgb(var(--main));
+}
+
+.search-box:hover {
+    color: rgb(var(--main));
+    font-size: 1.33em;
+}
+
+.search-icon--sm {
+    color: rgb(var(--accent-1));
+}
+
+.navbar-toggler {
+    position: fixed;
+    right: 20px;
+}
+
+@media (max-width: 575.98px) {
+    .navbar-collapse {
+        position: fixed;
+        right: 20px;
+        top: 75px;
+        background-color: rgb(var(--main));
+        border-radius: 5px;
+        border: 1px solid rgba(var(--secondary), 0.25);
+        padding: 2px 10px;
+        transition: 0.33s;
+    }
+
+    .index-nav {
+        padding-left: 5px;
+    }
+}
+
+@media (max-width: 360.98px) {
+    .index-nav {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+}
+
+/*====================
+* ▲ Nav Bar Styling ▲
+**====================*/
+
+/*======================
+* ▼ Slideshow Styling ▼
+**======================*/
+
+/* Got from W3Schools: https://www.w3schools.com/howto/howto_js_slideshow.asp */
+/* Got this code at: https://stackoverflow.com/questions/18516317/vertically-align-an-image-inside-a-div-with-responsive-height/18516474 */
+
+.slideshow-container {
+    width: 100%;
+    max-height: 700px;
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+}
+
+.dummy {
+    padding-top: 100%; /* forces 1:1 aspect ratio */
+}
+
+.slideshow-slide {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    
+    text-align:center; /* Align center inline elements */
+    font: 0/0 a;
+}
+
+.slideshow-slide .slide-centerer {
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+}
+
+.slideshow-slide img {
+    vertical-align: middle;
+    display: inline-block;
+    width: 100%;
+    filter: blur(5px);
+}
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 3s;
+    animation-name: fade;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+@font-face {
+    font-family: alex-brush;
+    src: url(../fonts/AlexBrush-Regular.ttf);
+}
+
+.heading-container {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%);
+    color: rgb(var(--main));
+}
+
+.heading-text {
+    font-family: alex-brush;
+    font-size: 8em;
+    letter-spacing: 15px;
+    line-height: 0.75em;
+}
+
+.subheading-text {
+    font-weight: bold;
+}
+
+.heading-container button {
+    color: rgb(var(--main));
+    background-color: rgb(var(--accent-2));
+    padding: 0.5em 1.5em;
+    font-weight: bold;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+/*====================
+* ▲ Slideshow Styling ▲
+**====================*/
+
+/*==========================
+* ▼ Search Banner Styling ▼
+**==========================*/
+
+.search-banner-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.search-banner-row input, .search-banner-row select, .search-banner-row option {
+    background-color: rgb(var(--secondary));
+    border-color: rgba(var(--main), 0.5);
+    color: rgba(var(--main), 0.5);
+    transition: 0.25s;
+    width: 200px;
+}
+
+.search-banner-row input:focus, .search-banner-row select:focus {
+    background-color: rgb(var(--secondary));
+    border-color: rgb(var(--accent-2));
+    color: rgba(var(--main), 1);
+    box-shadow: none;
+}
+
+option:hover {
+    font-weight: bold;
+}
+
+input[type=submit].btn, .search-banner-row button {
+    color: rgb(var(--main));
+    background-color: rgb(var(--accent-1));
+    padding-right: 1.5em;
+    padding-left: 1.5em;
+    font-weight: bold;
+}
+
+/*==========================
+* ▲ Search Banner Styling ▲
+**==========================*/
+
+/*=========================
+* ▼ Masonry Grid Styling ▼
+**=========================*/
+
+.masonry-grid {
+    margin: 30px auto;
+}
+
+.masonry-grid-item { 
+    width: 450px;
+    position: relative;
+    margin-bottom: 10px;
+    transition: width 0.33s;
+}
+
+.masonry-grid-item--width2 {
+    width: 800px;
+}
+
+.masonry-grid-image {
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px rgba(var(--secondary), 0.5);
+    transition: 0.15s;
+}
+
+.masonry-grid-item:hover .masonry-grid-image {
+    transform: scale(1.02);
+    opacity: 0.975;
+}
+
+.masonry-grid-image--overlay {
+    position: absolute;
+    bottom: 10px;
+    left: 15px;
+    text-shadow: 0 0 10px 5px rgba(var(--secondary), 0.5);
+    font-weight: bold;
+    color: rgb(var(--main));
+    text-shadow: -1px -1px 0 rgba(var(--secondary), 0.5), 
+        1px -1px 0 rgba(var(--secondary), 0.5), 
+        -1px 1px 0 rgba(var(--secondary), 0.5), 
+        1px 1px 0 rgba(var(--secondary), 0.5);
+    transition: 0.15s;
+}
+
+.masonry-grid-item:hover .masonry-grid-image--overlay { 
+    bottom: 7px;
+    left: 10px;
+    opacity: 0.975;
+    color: rgb(var(--accent-2));
+}
+
+@media (max-width: 1079.98px) {
+    .masonry-grid-item {
+        width: 225px;
+    }
+}
+
+/*=========================
+* ▲ Masonry Grid Styling ▲
+**=========================*/
+
+/*===================
+* ▼ Footer Styling ▼
+**===================*/
+
+.index-footer {
+    display: flex;
+    align-items: center;
+    padding: 75px;
+    position: relative;
+}
+
+.js-logo {
+    width: 100px;
+}
+
+.footer-info {
+    display: flex;
+    flex-direction: column;
+    color: rgb(var(--main));
+    height: 100%;
+    margin-left: 10px;
+}
+
+/*===================
+* ▲ Footer Styling ▲
+**===================*/

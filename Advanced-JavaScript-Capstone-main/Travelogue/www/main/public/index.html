@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Site styling based on this template: https://colorlib.com/wp/template/travelo/ -->
+    <!-- Random pictures gotten from: https://randomwordgenerator.com/picture.php -->
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Removes this error in the console: GET http://127.0.0.1:5500/favicon.ico 404 (Not Found) -->
+    <!-- Source: https://stackoverflow.com/questions/31075893/im-getting-favicon-ico-error -->
+    <link rel="icon" href="./images/compass.png">
+
+    <!-- Imported libraries -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
+    <link href="css/all.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/index.css">
+
+    <title>TravelLogue</title>
+</head>
+
+<body>
+    <nav class="site-navigation">
+        <nav class="index-nav">
+            <div class="logo-container">
+                <i class="fas fa-drafting-compass fa-2x text-color--accent-1 mx-3"></i>
+            </div>
+            <h4 class="company-name mr-2">TravelLogue</h4>
+            <div class="nav-separator mx-lg-3 mx-xl-5 d-none d-lg-block"></div>
+
+            <nav class="ml-auto ml-sm-0 mr-4 mr-sm-0 navbar navbar-expand-sm navbar-light px-0">
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Pages
+                            </a>
+                            <div class="dropdown-menu pages-dropdown-menu" aria-labelledby="navbarDropdown">
+                                <!-- This information is dynamically populated by JS -->
+                                <!-- <div class="dropdown-divider"></div> -->
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- The right side of the nav bar -->
+            <div class="index-nav--right-side d-none d-md-flex">
+                <p class="phone-number font-weight-bold d-none d-lg-block mr-2"><i
+                        class="fa fa-phone fa-flip-horizontal text-color--accent-1"></i> (123) 456-7891</p>
+                <div class="nav-separator mx-lg-2 mx-xl-4 d-none d-lg-block"></div>
+                <a href="#"><i class="fab fa-instagram mx-2"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in mx-2"></i></a>
+                <a href="#"><i class="fab fa-facebook-f mx-2"></i></a>
+                <a href="#"><i class="fab fa-google-plus-g mx-2"></i></a>
+                <a href="#"><i class="fas fa-search mx-2 d-block d-lg-none search-icon--sm"></i></a>
+            </div>
+        </nav>
+
+        <a href="#" class="search-box d-none d-lg-flex">
+            <i class="fas fa-search"></i>
+        </a>
+    </nav>
+
+    <div class="greeting-container">
+        <div class="slideshow-container">
+            <div class="dummy"></div>
+
+            <div class="heading-container">
+                <h1 class="heading-text">Welcome</h1>
+                <p class="subheading-text">Take a look at our travel options below</p>
+                <button class="btn mt-5">Explore Now</button>
+            </div>
+            
+        </div>
+    </div>
+
+    <section class="search-banner bg-color--secondary py-5 mx-0">
+        <div class="container">
+            <div class="search-banner-row">
+                <h4 class="text-light text-center col-xl-auto px-1">Where do you want to go?</h4>
+
+                <div class="px-1 mt-2">
+                    <input type="text" class="form-control" placeholder="Where to go?" />
+                </div>
+
+                <div class="px-1 mt-2">
+                    <select class="form-control">
+                        <option>When?</option>
+                        <option>Now!</option>
+                        <option>In a Few Weeks</option>
+                        <option>Months from Now</option>
+                        <option>Next Year</option>
+                        <option>Later</option>
+                    </select>
+                </div>
+
+                <div class="px-1 mt-2">
+                    <select class="form-control">
+                        <option>Travel Type</option>
+                        <option>Plane</option>
+                        <option><i class="fas fa-car"></i>Car</option>
+                        <option>Boat</option>
+                    </select>
+
+                </div>
+
+                <div class="px-1 mt-2">
+                    <button class="btn">Search</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="mx-2 mx-lg-5">
+        <h1 class="text-center mt-3">Popular Destinations</h1>
+        <p class="text-center">Plan a visit to one of these great destinations.</p>
+
+        <div class="masonry-grid">
+
+
+            <!-------------------------------------------------------------------
+
+                Copy and paste the template div to add your app to the home page:
+
+                <div class="masonry-grid-item">
+                    <a href="#YOUR_LINK">
+                        <img src="YOUR_IMAGE" class="masonry-grid-image">
+                        <p class="masonry-grid-image--overlay">YOUR_APP_NAME</p>
+                    </a>
+                </div>
+
+             ------------------------------------------------------------------>
+
+
+            <div class="masonry-grid-item">
+                <a href="#">
+                    <img src="images/tree.jpg" class="masonry-grid-image">
+                    <p class="masonry-grid-image--overlay">Tree</p>
+                </a>
+            </div>
+
+
+            <div class="masonry-grid-item">
+                <a href="#">
+                    <img src="images/boat.jpg" class="masonry-grid-image">
+                    <p class="masonry-grid-image--overlay">Boat</p>
+                </a>
+            </div>
+
+
+            <div class="masonry-grid-item">
+                <a href="#">
+                    <img src="images/squirrel.jpg" class="masonry-grid-image">
+                    <p class="masonry-grid-image--overlay">Squirrel</p>
+                </a>
+            </div>
+
+
+            <div class="masonry-grid-item">
+                <a href="#asdfasfd">
+                    <img src="images/railroad.jpg" class="masonry-grid-image">
+                    <p class="masonry-grid-image--overlay">Railroad</p>
+                </a>
+            </div>
+
+
+            <div class="masonry-grid-item">
+                <a href="#">
+                    <img src="images/wonky_building.jpg" class="masonry-grid-image">
+                    <p class="masonry-grid-image--overlay">Building</p>
+                </a>
+            </div>
+
+
+            <div class="masonry-grid-item">
+                <a href="#afafa">
+                    <img src="images/tree.jpg" class="masonry-grid-image">
+                    <p class="masonry-grid-image--overlay">Tree</p>
+                </a>
+            </div>
+
+
+            <div class="masonry-grid-item">
+                <a href="#TESTING">
+                    <img src="images/chicken.jpg" class="masonry-grid-image">
+                    <p class="masonry-grid-image--overlay">SOME TEXT</p>
+                </a>
+            </div>
+
+
+        </div>
+    </div>
+
+    <footer class="index-footer bg-color--secondary">
+    </footer>
+
+    <!-- Imported libraries -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/parallax.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/masonry-4.2.2.min.js"></script>
+
+    <script src="js/index.js"></script>
+
+</body>
+
+</html>
